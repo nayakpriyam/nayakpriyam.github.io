@@ -5,4 +5,8 @@ permalink: /photography/
 author_profile: true
 ---
 
-Will be updated soon.
+# My Photography
+
+Here are some of my favorite photographs:
+
+<img src="/images/dudhsagar-1.jpg" alt="Dudhsagar Falls" width="600">
