@@ -62,11 +62,11 @@ author_profile: true
     <div class="caption">Dona Paula Beach, Panaji, Goa</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/IMG_5343.HEIC" alt="Parade at Wagah Border">
+    <img src="/images/IMG_5343.jpg" alt="Parade at Wagah Border">
     <div class="caption">Parade at Wagah Border</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/IMG_5319.HEIC" alt="Golden Temple, Amritsar">
+    <img src="/images/IMG_5319.jpg" alt="Golden Temple, Amritsar">
     <div class="caption">Golden Temple, Amritsar</div>
   </div>
   <div class="gallery-item">
