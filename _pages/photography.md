@@ -5,7 +5,7 @@ permalink: /photography/
 author_profile: true
 ---
 
-# Some of my clicks
+# My Photography
 
 <style>
 .gallery {
@@ -22,10 +22,13 @@ author_profile: true
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   display: block;
 }
 .caption {
@@ -46,7 +49,7 @@ author_profile: true
     <div class="caption">Early morning at Gateway of India, Mumbai</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/dudhsagar-2.JPG" alt="Dudhsagar Falls, Goa">
+    <img src="/images/dudhsagar-2.jpg" alt="Dudhsagar Falls, Goa">
     <div class="caption">Dudhsagar Falls, Goa</div>
   </div>
   <div class="gallery-item">
@@ -54,7 +57,7 @@ author_profile: true
     <div class="caption">Mumbai Municipal Corporation (BMC) headquarters</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/IMG_8991.jpeg" alt="View from Aguada Fort, Goa">
+    <img src="/images/IMG_8991.JPG" alt="View from Aguada Fort, Goa">
     <div class="caption">View from Aguada Fort, Goa</div>
   </div>
   <div class="gallery-item">
@@ -62,11 +65,11 @@ author_profile: true
     <div class="caption">Dona Paula Beach, Panaji, Goa</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/IMG_5343.jpg" alt="Parade at Wagah Border">
+    <img src="/images/IMG_5343.HEIC" alt="Parade at Wagah Border">
     <div class="caption">Parade at Wagah Border</div>
   </div>
   <div class="gallery-item">
-    <img src="/images/IMG_5319.jpg" alt="Golden Temple, Amritsar">
+    <img src="/images/IMG_5319.HEIC" alt="Golden Temple, Amritsar">
     <div class="caption">Golden Temple, Amritsar</div>
   </div>
   <div class="gallery-item">
