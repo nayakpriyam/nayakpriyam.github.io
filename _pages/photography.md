@@ -5,7 +5,7 @@ permalink: /photography/
 author_profile: true
 ---
 
-# My Photography
+# Some of my clicks
 
 <div style="text-align:center;">
   <img src="/images/2735841B-73E4-40AD-B33C-E9B28C7D34B5.jpg" alt="CSMT Station at midnight" width="600"><br>
@@ -20,7 +20,7 @@ author_profile: true
 <br>
 
 <div style="text-align:center;">
-  <img src="/images/dudhsagar-2.jpg" alt="Dudhsagar Falls, Goa" width="600"><br>
+  <img src="/images/dudhsagar-2.JPG" alt="Dudhsagar Falls, Goa" width="600"><br>
   <span style="font-size:1em; color: #555;">Dudhsagar Falls, Goa</span>
 </div>
 <br>
@@ -32,7 +32,7 @@ author_profile: true
 <br>
 
 <div style="text-align:center;">
-  <img src="/images/IMG_8991.JPG" alt="View from Aguada Fort, Goa" width="600"><br>
+  <img src="/images/IMG_8991.jpeg" alt="View from Aguada Fort, Goa" width="600"><br>
   <span style="font-size:1em; color: #555;">View from Aguada Fort, Goa</span>
 </div>
 <br>
