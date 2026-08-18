@@ -1,0 +1,218 @@
+---
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/home-redesign.css' | relative_url }}">
+    {% seo %}
+  </head>
+
+  <body class="home-redesign">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <svg class="pn-icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="pn-icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h13M13 7l5 5-5 5" />
+      </symbol>
+      <symbol id="pn-icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4.5 21c.8-4.5 3.2-6.5 7.5-6.5s6.7 2 7.5 6.5" />
+      </symbol>
+      <symbol id="pn-icon-briefcase" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M9 7V4h6v3M3 12h18M10 12v2h4v-2" />
+      </symbol>
+      <symbol id="pn-icon-book" viewBox="0 0 24 24">
+        <path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H12v18H7.5A3.5 3.5 0 0 0 4 23z" />
+        <path d="M20 5.5A3.5 3.5 0 0 0 16.5 2H12v18h4.5A3.5 3.5 0 0 1 20 23z" />
+      </symbol>
+      <symbol id="pn-icon-file" viewBox="0 0 24 24">
+        <path d="M6 2h8l4 4v16H6z" />
+        <path d="M14 2v5h5M9 12h6M9 16h6" />
+      </symbol>
+      <symbol id="pn-icon-camera" viewBox="0 0 24 24">
+        <path d="M4 7h4l1.5-2h5L16 7h4v13H4z" />
+        <circle cx="12" cy="13.5" r="4" />
+      </symbol>
+      <symbol id="pn-icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="pn-icon-news" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M7 8h6M7 12h10M7 16h10M16 8h1" />
+      </symbol>
+      <symbol id="pn-icon-linkedin" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="3" />
+        <circle cx="8" cy="9" r="1.2" class="pn-icon-fill" />
+        <path d="M8 12v5M12 17v-5M12 14c.5-1.5 1.6-2.2 3-2.2 2 0 3 1.3 3 3.4V17" />
+      </symbol>
+      <symbol id="pn-icon-scholar" viewBox="0 0 24 24">
+        <path d="m3 9 9-5 9 5-9 5zM7 12v4c2.7 2.5 7.3 2.5 10 0v-4M21 9v6" />
+      </symbol>
+      <symbol id="pn-icon-code" viewBox="0 0 24 24">
+        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" />
+      </symbol>
+      <symbol id="pn-icon-orcid" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M9 8v8M9 6.5h.01M12 9h2.2c2.2 0 3.8 1.3 3.8 3.5S16.4 16 14.2 16H12z" />
+      </symbol>
+    </svg>
+
+    <main class="pn-home" id="main" role="main">
+      <div class="pn-shell">
+        <section class="pn-hero" aria-labelledby="pn-home-title">
+          <div class="pn-hero__copy">
+            <p class="pn-eyebrow">{{ site.description }}</p>
+            <h1 id="pn-home-title">{{ site.author.name | default: site.title }}</h1>
+            <div class="pn-role">{{ site.author.bio }}</div>
+
+            <div class="pn-hero__actions" aria-label="Primary links">
+              <a class="pn-btn pn-btn--primary" href="{{ '/cv/' | relative_url }}">
+                <span>CV</span>
+                <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-arrow"></use></svg>
+              </a>
+              <a class="pn-btn pn-btn--secondary" href="{{ '/publications/' | relative_url }}">
+                <span>Publications</span>
+                <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-arrow"></use></svg>
+              </a>
+            </div>
+
+            <div class="pn-socials" aria-label="Social profiles">
+              {% if site.author.linkedin %}
+                <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-linkedin"></use></svg><span>LinkedIn</span>
+                </a>
+              {% endif %}
+              {% if site.author.googlescholar %}
+                <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-scholar"></use></svg><span>Google Scholar</span>
+                </a>
+              {% endif %}
+              {% if site.author.github %}
+                <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-code"></use></svg><span>GitHub</span>
+                </a>
+              {% endif %}
+              {% if site.author.orcid %}
+                <a href="{{ site.author.orcid }}" target="_blank" rel="noopener" aria-label="ORCID">
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-orcid"></use></svg><span>ORCID</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="pn-hero__visual" aria-label="Profile photograph">
+            <div class="pn-plant" aria-hidden="true">
+              <svg viewBox="0 0 640 560" role="presentation" focusable="false">
+                <g class="pn-plant__grid">
+                  <path d="M40 95H595M40 175H595M40 255H595M40 335H595M40 415H595" />
+                  <path d="M95 40V520M175 40V520M255 40V520M335 40V520M415 40V520M495 40V520" />
+                </g>
+                <g class="pn-plant__process">
+                  <path d="M64 308H145V260H215V153H310" />
+                  <path d="M202 260V365H285" />
+                  <path d="M465 144H545V215H584" />
+                  <path d="M465 382H535V438H586" />
+                  <path d="M434 245H520V303H572" />
+                  <circle cx="145" cy="260" r="13" />
+                  <circle cx="202" cy="365" r="13" />
+                  <circle cx="545" cy="215" r="13" />
+                  <circle cx="535" cy="438" r="13" />
+                  <circle cx="120" cy="308" r="30" />
+                  <path d="M98 308h44M108 296l24 24M132 296l-24 24" />
+                  <rect x="386" y="92" width="80" height="344" rx="40" />
+                  <path d="M386 145h80M386 198h80M386 251h80M386 304h80M386 357h80" />
+                  <path d="M426 92V56M426 436v45" />
+                  <path d="M426 56h91v38" />
+                  <rect x="510" y="270" width="72" height="136" rx="34" />
+                  <path d="M510 315h72M510 360h72" />
+                  <path d="M546 270v-28M546 406v31" />
+                  <path d="M300 153h48c18 0 32 14 32 32v44" />
+                  <path d="M285 365h57c20 0 36-16 36-36v-25" />
+                  <circle cx="310" cy="153" r="7" />
+                  <circle cx="285" cy="365" r="7" />
+                  <path d="M84 470h116" />
+                  <path d="M98 451v38M128 451v38M158 451v38M188 451v38" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="pn-photo-halo" aria-hidden="true"></div>
+            <figure class="pn-photo-frame">
+              <img src="{{ '/images/profile.jpg' | relative_url }}" alt="{{ site.author.name }}">
+            </figure>
+          </div>
+        </section>
+
+        <section class="pn-about-card" id="about" aria-labelledby="pn-about-title">
+          <div class="pn-about-card__heading">
+            <span class="pn-about-icon" aria-hidden="true">
+              <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-user"></use></svg>
+            </span>
+            <div>
+              <p class="pn-section-label">Homepage</p>
+              <h2 id="pn-about-title">{{ page.title }}</h2>
+            </div>
+          </div>
+          <div class="pn-about-card__content">
+            {{ content }}
+          </div>
+        </section>
+
+        <nav class="pn-home-links" aria-label="Website sections">
+          {% for link in site.data.navigation.main %}
+            {% unless link.url == '/' %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <a class="pn-home-link" href="{{ domain }}{{ link.url }}">
+                <span class="pn-home-link__icon" aria-hidden="true">
+                  {% if link.url == '/experience/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-briefcase"></use></svg>
+                  {% elsif link.url == '/publications/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-book"></use></svg>
+                  {% elsif link.url == '/cv/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-file"></use></svg>
+                  {% elsif link.url == '/photography/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-camera"></use></svg>
+                  {% elsif link.url == '/contact/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-mail"></use></svg>
+                  {% elsif link.url == '/year-archive/' %}
+                    <svg class="pn-svg"><use href="#pn-icon-news"></use></svg>
+                  {% else %}
+                    <svg class="pn-svg"><use href="#pn-icon-arrow"></use></svg>
+                  {% endif %}
+                </span>
+                <span class="pn-home-link__title">{{ link.title }}</span>
+                <span class="pn-home-link__arrow" aria-hidden="true">
+                  <svg class="pn-svg"><use href="#pn-icon-arrow"></use></svg>
+                </span>
+              </a>
+            {% endunless %}
+          {% endfor %}
+        </nav>
+      </div>
+    </main>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>
