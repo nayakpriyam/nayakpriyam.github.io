@@ -19,6 +19,55 @@
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
+    <svg class="pn-icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="pn-icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h13M13 7l5 5-5 5" />
+      </symbol>
+      <symbol id="pn-icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4.5 21c.8-4.5 3.2-6.5 7.5-6.5s6.7 2 7.5 6.5" />
+      </symbol>
+      <symbol id="pn-icon-briefcase" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M9 7V4h6v3M3 12h18M10 12v2h4v-2" />
+      </symbol>
+      <symbol id="pn-icon-book" viewBox="0 0 24 24">
+        <path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H12v18H7.5A3.5 3.5 0 0 0 4 23z" />
+        <path d="M20 5.5A3.5 3.5 0 0 0 16.5 2H12v18h4.5A3.5 3.5 0 0 1 20 23z" />
+      </symbol>
+      <symbol id="pn-icon-file" viewBox="0 0 24 24">
+        <path d="M6 2h8l4 4v16H6z" />
+        <path d="M14 2v5h5M9 12h6M9 16h6" />
+      </symbol>
+      <symbol id="pn-icon-camera" viewBox="0 0 24 24">
+        <path d="M4 7h4l1.5-2h5L16 7h4v13H4z" />
+        <circle cx="12" cy="13.5" r="4" />
+      </symbol>
+      <symbol id="pn-icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="pn-icon-news" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M7 8h6M7 12h10M7 16h10M16 8h1" />
+      </symbol>
+      <symbol id="pn-icon-linkedin" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="3" />
+        <circle cx="8" cy="9" r="1.2" class="pn-icon-fill" />
+        <path d="M8 12v5M12 17v-5M12 14c.5-1.5 1.6-2.2 3-2.2 2 0 3 1.3 3 3.4V17" />
+      </symbol>
+      <symbol id="pn-icon-scholar" viewBox="0 0 24 24">
+        <path d="m3 9 9-5 9 5-9 5zM7 12v4c2.7 2.5 7.3 2.5 10 0v-4M21 9v6" />
+      </symbol>
+      <symbol id="pn-icon-code" viewBox="0 0 24 24">
+        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" />
+      </symbol>
+      <symbol id="pn-icon-orcid" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M9 8v8M9 6.5h.01M12 9h2.2c2.2 0 3.8 1.3 3.8 3.5S16.4 16 14.2 16H12z" />
+      </symbol>
+    </svg>
+
     <main class="pn-home" id="main" role="main">
       <div class="pn-shell">
         <section class="pn-hero" aria-labelledby="pn-home-title">
@@ -30,33 +79,33 @@
             <div class="pn-hero__actions" aria-label="Primary links">
               <a class="pn-btn pn-btn--primary" href="{{ '/cv/' | relative_url }}">
                 <span>CV</span>
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-arrow"></use></svg>
               </a>
               <a class="pn-btn pn-btn--secondary" href="{{ '/publications/' | relative_url }}">
                 <span>Publications</span>
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-arrow"></use></svg>
               </a>
             </div>
 
             <div class="pn-socials" aria-label="Social profiles">
               {% if site.author.linkedin %}
                 <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span>
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-linkedin"></use></svg><span>LinkedIn</span>
                 </a>
               {% endif %}
               {% if site.author.googlescholar %}
                 <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
-                  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span>
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-scholar"></use></svg><span>Google Scholar</span>
                 </a>
               {% endif %}
               {% if site.author.github %}
                 <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">
-                  <i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span>
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-code"></use></svg><span>GitHub</span>
                 </a>
               {% endif %}
               {% if site.author.orcid %}
                 <a href="{{ site.author.orcid }}" target="_blank" rel="noopener" aria-label="ORCID">
-                  <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
+                  <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-orcid"></use></svg><span>ORCID</span>
                 </a>
               {% endif %}
             </div>
@@ -107,7 +156,9 @@
 
         <section class="pn-about-card" id="about" aria-labelledby="pn-about-title">
           <div class="pn-about-card__heading">
-            <span class="pn-about-icon" aria-hidden="true"><i class="far fa-user"></i></span>
+            <span class="pn-about-icon" aria-hidden="true">
+              <svg class="pn-svg" aria-hidden="true"><use href="#pn-icon-user"></use></svg>
+            </span>
             <div>
               <p class="pn-section-label">Homepage</p>
               <h2 id="pn-about-title">{{ page.title }}</h2>
@@ -129,23 +180,25 @@
               <a class="pn-home-link" href="{{ domain }}{{ link.url }}">
                 <span class="pn-home-link__icon" aria-hidden="true">
                   {% if link.url == '/experience/' %}
-                    <i class="fas fa-briefcase"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-briefcase"></use></svg>
                   {% elsif link.url == '/publications/' %}
-                    <i class="fas fa-book-open"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-book"></use></svg>
                   {% elsif link.url == '/cv/' %}
-                    <i class="far fa-file-alt"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-file"></use></svg>
                   {% elsif link.url == '/photography/' %}
-                    <i class="fas fa-camera"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-camera"></use></svg>
                   {% elsif link.url == '/contact/' %}
-                    <i class="far fa-envelope"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-mail"></use></svg>
                   {% elsif link.url == '/year-archive/' %}
-                    <i class="far fa-newspaper"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-news"></use></svg>
                   {% else %}
-                    <i class="fas fa-arrow-right"></i>
+                    <svg class="pn-svg"><use href="#pn-icon-arrow"></use></svg>
                   {% endif %}
                 </span>
                 <span class="pn-home-link__title">{{ link.title }}</span>
-                <i class="fas fa-arrow-right pn-home-link__arrow" aria-hidden="true"></i>
+                <span class="pn-home-link__arrow" aria-hidden="true">
+                  <svg class="pn-svg"><use href="#pn-icon-arrow"></use></svg>
+                </span>
               </a>
             {% endunless %}
           {% endfor %}
