@@ -3,6 +3,7 @@ permalink: /
 title: "About"
 excerpt: "Ph.D. scholar at IIT Bombay. Chemical engineering, research, and innovation."
 author_profile: true
+published: false
 redirect_from: 
   - /about/
   - /about.html
